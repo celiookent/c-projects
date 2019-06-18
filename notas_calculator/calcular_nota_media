@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+main()
+{
+int op = 1;
+while (op<=7)	
+{
+	char professor[50];
+	float m1,nd,pi,m2,md;
+	
+	printf("Digite o nome do professor: ");
+	scanf("%s",&professor);
+	printf("Digite a nota da M1: ");
+	scanf("%f",&m1);
+	printf("Digite a nota da Nota Integrada: ");
+	scanf("%f",&pi);
+	
+//pi=7.0;
+	
+nd = 0;
+md = 0;
+m2 = 0;
+printf("\nNome do professor: %s",professor);
+
+
+for(nd=0;md<5;nd=nd+0.1)
+{
+m2 = (nd*0.7)+(pi*0.3);
+md = (m1+(m2*2))/3;
+}
+
+printf("\nNota ND necessaria para passar: %2.2f",nd);
+md = 0;
+nd = 0;
+
+for(nd=0;md<3;nd=nd+0.1)
+{
+m2 = (nd*0.7)+(pi*0.3);
+md = (m1+(m2*2))/3;
+}
+printf("\nNota ND necessaria para ficar de Exame: %2.2f\n",nd);
+system("pause");
+printf ("\n\n");
+}
+}
